@@ -23,7 +23,7 @@ const Banner = () => {
            </Button>
             </Link>
 
-            <Link href="/pricing">
+            <Link href="/all-tiles">
               <Button variant="outline" className="text-white">
                 View Gallery 
               </Button>

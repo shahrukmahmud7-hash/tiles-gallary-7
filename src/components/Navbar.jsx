@@ -32,6 +32,15 @@ const Navbar = () => {
             <Link href="/my-profile">My Profile</Link>
           </li>
         </ul>
+        
+         <ul className="flex gap-5 text-[#706F6F] text-sm items-center justify-end">
+            <li>
+            <Link href="/login">Login</Link>
+          </li>
+          <li>
+            <Link href="/register">Register</Link>
+          </li>
+          </ul>
       </nav>
     </div>
   );
