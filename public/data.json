@@ -1,0 +1,74 @@
+[
+  {
+    "id": "tile_001",
+    "title": "Ceramic Blue Tile",
+    "description": "Premium ceramic tile with blue glaze finish",
+    "image": "/images/tiles/tile_001.jpg",
+    "category": "ceramic",
+    "price": 45.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_002",
+    "title": "Ceramic White Tile",
+    "description": "Elegant white ceramic tile with glossy finish",
+    "image": "/images/tiles/tile_002.jpg",
+    "category": "ceramic",
+    "price": 42.50,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_003",
+    "title": "Ceramic Grey Tile",
+    "description": "Modern grey ceramic tile for stylish interiors",
+    "image": "/images/tiles/tile_003.jpg",
+    "category": "ceramic",
+    "price": 47.25,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": false
+  },
+  {
+    "id": "tile_004",
+    "title": "Ceramic Black Tile",
+    "description": "Luxury black ceramic tile with matte finish",
+    "image": "/images/tiles/tile_004.jpg",
+    "category": "ceramic",
+    "price": 49.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_005",
+    "title": "Ceramic Beige Tile",
+    "description": "Warm beige ceramic tile for cozy spaces",
+    "image": "/images/tiles/tile_005.jpg",
+    "category": "ceramic",
+    "price": 44.75,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_006",
+    "title": "Ceramic Green Tile",
+    "description": "Fresh green ceramic tile with natural look",
+    "image": "/images/tiles/tile_006.jpg",
+    "category": "ceramic",
+    "price": 46.30,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": false
+  }
+] 
