@@ -1,6 +1,6 @@
 
 
-import { Button, Card, Chip, Separator, SeparatorRoot } from "@heroui/react";
+import { Button, Card, SeparatorRoot } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -29,8 +29,9 @@ const TilesCard = ({ tile }) => {
             <p className="text-lg font-semibold text-gray-400" >{tile.description}</p>
          </div>
           
-          <Link className="flex items-center justify-center" href="">
-            <Button className="w-full" variant="danger" >View Gallery</Button>
+          <Link href={`/all-tiles/${tile.id}`}
+          className="flex items-center justify-center" >
+            <Button className="w-full" variant="danger" >View Details</Button>
           </Link>
         
         </Card>

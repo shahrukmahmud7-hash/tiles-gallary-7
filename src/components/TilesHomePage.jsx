@@ -6,7 +6,6 @@ const TilesHomePage = async() => {
 
   const res = await fetch('https://tiles-gallary-7.vercel.app/data.json')
   const tiles = await res.json();
-  console.log(tiles , 'tiles');
 
     return (
         <div className="mt-6 max-w-7xl mx-auto ">

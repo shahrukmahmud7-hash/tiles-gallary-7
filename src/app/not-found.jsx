@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { IoMdFootball } from "react-icons/io";
 
@@ -21,9 +20,7 @@ const NotFoundPage = () => {
         <h1 className="text-7xl md:text-9xl 
         font-extrabold text-gray-800 animate-pulse
         ">
-         <Image src="/error2.avif" width={200} height={200} alt="error" > 
-
-         </Image>
+          404
         </h1>
 
         <h2 className="text-2xl md:text-3xl 
@@ -55,4 +52,4 @@ const NotFoundPage = () => {
     );
 };
 
-export default NotFoundPage; 
+export default NotFoundPage;
