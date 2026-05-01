@@ -1,6 +1,6 @@
-// "use client"
 
-import { Button, Card, Chip, Separator } from "@heroui/react";
+
+import { Button, Card, Chip, Separator, SeparatorRoot } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,13 +18,19 @@ const TilesCard = ({ tile }) => {
                 />
                
            </div>
-           <div className="space-y-2">
-             <h2>{tile.title}</h2>
-            <p>{tile.description}</p>
+           <div className="space-y-2 text-center"> 
+             <h2 className="text-2xl font-bold text-gray-800" >{tile.title}</h2>
+    
+            <h2 className="text-2xl font-bold text-gray-800" >
+              <span className=" hover:text-red-500 text-green-500 cursor-pointer 
+              "> Material : </span>
+              {tile.material}</h2>
+              <SeparatorRoot orientation="horizontal"/>
+            <p className="text-lg font-semibold text-gray-400" >{tile.description}</p>
          </div>
           
-          <Link href="">
-            <Button className="" variant="danger" >View Gallery</Button>
+          <Link className="flex items-center justify-center" href="">
+            <Button className="w-full" variant="danger" >View Gallery</Button>
           </Link>
         
         </Card>

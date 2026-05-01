@@ -23,7 +23,7 @@ const Banner = () => {
            </Button>
             </Link>
 
-            <Link href="/all-tiles">
+            <Link href="/#">
               <Button variant="outline" className="text-white">
                 View Gallery 
               </Button>
