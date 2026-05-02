@@ -23,8 +23,8 @@ const TilesCard = ({ tile }) => {
     
             <h2 className="text-2xl font-bold text-gray-800" >
               <span className=" hover:text-red-500 text-green-500 cursor-pointer 
-              "> Material : </span>
-              {tile.material}</h2>
+              "> InStock : </span>
+              {tile.inStock}</h2>
               <SeparatorRoot orientation="horizontal"/>
             <p className="text-lg font-semibold text-gray-400" >{tile.description}</p>
          </div>

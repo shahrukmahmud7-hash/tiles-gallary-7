@@ -12,8 +12,10 @@ const Navbar = () => {
           <Image
             src={"/tile-logo2.jpg"}
             alt="logo"
+            loading="eager"
             width={60}
             height={60}
+            className="object-cover h-auto w-auto"
           />
           <h3 className="font-black text-lg bg-gradient-to-r from-slate-800 via-blue-600 to-slate-500 bg-clip-text text-transparent "
           >

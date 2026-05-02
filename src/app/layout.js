@@ -1,12 +1,11 @@
-import { Outfit } from "next/font/google";
+import {Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const OutfitFont = Outfit({
+const RobotoFont = Roboto({
   subsets: ["latin"],
 });
-
 
 
 export const metadata = {
@@ -18,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${OutfitFont.className}  h-full antialiased`}
+      className={`${RobotoFont.className}  h-full antialiased`}
     >
       <body>
         <Navbar/>

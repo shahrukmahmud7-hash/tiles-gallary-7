@@ -1,10 +1,27 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
 import {Check} from "@gravity-ui/icons";
 import { Button, Card, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 
 const RegisterPage = () => {
 
- const onSubmit = () =>{
+ const onSubmit = async (e) =>{
+       e.preventDefault();
+
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    // console.log(name, email, password);
+
+    const {data, error} = await authClient.signUp.email({
+        name,
+        email,
+        password,
+    })
+    
+
+    console.log({data, error})
 
    }
 
