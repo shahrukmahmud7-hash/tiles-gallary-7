@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link"
-
+import data from '../../../../public/data.json'
 
 const TilesDetailsPage = async ({ params }) => {
     const {id} = await params;
 
-  const res = await fetch('https://tiles-gallary-7.vercel.app/data.json')
-  const tiles = await res.json();
-  const tile = tiles.find(t => t.id == id)
+  // const res = await fetch('https://tiles-gallary-7.vercel.app/data.json')
+  // const tiles = await res.json();
+  const tile = data.find(t => t.id == id)
 
     return (
         <div className="max-w-7xl mx-auto px-6 py-10">   
