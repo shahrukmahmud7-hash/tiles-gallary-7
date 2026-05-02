@@ -19,14 +19,19 @@ const TilesCard = ({ tile }) => {
                
            </div>
            <div className="space-y-2 text-center"> 
-             <h2 className="text-2xl font-bold text-gray-800" >{tile.title}</h2>
+             <h2 className="text-2xl font-bold text-gray-800" >{tile.title}
+
+             </h2>
     
             <h2 className="text-2xl font-bold text-gray-800" >
-              <span className=" hover:text-red-500 text-green-500 cursor-pointer 
-              "> InStock : </span>
-              {tile.inStock}</h2>
+              {/* <span className="  text-green-500 cursor-pointer 
+              "> {tile.inStock} </span> 
+              InStock : */}
+              
+              </h2>
+
               <SeparatorRoot orientation="horizontal"/>
-            <p className="text-lg font-semibold text-gray-400" >{tile.description}</p>
+            <p className="text-lg font-semibold hover:text-green-500 text-gray-400" >{tile.description}</p>
          </div>
           
           <Link href={`/all-tiles/${tile.id}`}
