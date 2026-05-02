@@ -1,37 +1,80 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { Button } from "@heroui/react";
 import Link from "next/link";
 
+const images = [
+  "/images/banner-eternal.avif",
+  "/images/banner-ts.jpg",
+  "/images/tiles-showroom.avif",
+];
+
 const Banner = () => {
-  return (
-    <div className="max-w-7xl mx-auto "> 
-    <div className="bg-[url('https://i.ibb.co.com/jvMyP74r/tiles-showroom-design-3d-rendering-1001861-114.avif')] h-[40vh] sm:h-[50vh] md:h-[55vh] lg:h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl lg: ">
-      {/* Overlay */}
-      <div className="w-full h-full rounded-lg bg-black/50 flex items-center ">
-        <div className="max-w-7xl mx-auto px-6 text-white">
-          <h1 className="text-4xl md:text-5xl text-gray-50 font-bold mb-4 max-w-2xl">
-            Browse a wide range of tiles To bring your ideas to life.
-          </h1>
-          <p className="text-lg md:text-xl mb-6 max-w-xl text-gray-200">
-            Explore unique patterns and textures that bring life and character to your space.
-          </p>
 
-          <div className="flex gap-4 ">
-            <Link href="#">
-             <Button className="bg-gradient-to-r from-red-500 via-red-800 to-red-950
-              text-white font-semibold shadow-md hover:opacity-90 transition">
-                   Discover Now
-           </Button>
-            </Link>
+  const [isImage, isSetImage] = useState(0);
 
-            <Link href="/#">
-              <Button variant="outline" className="text-white">
-                View Gallery 
-              </Button>
-            </Link>
+  useEffect(() => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      isSetImage((prev) => (prev + 1) % images.length);
+    }, 2500);
+
+    return () => clearInterval(timer);
+  }, []);
+
+   return (
+     <div className="max-w-7xl mx-auto px-4 mt-6">
+      <div
+        className="relative h-[40vh] sm:h-[50vh] md:h-[55vh] lg:h-[60vh] 
+        w-full bg-cover bg-center flex items-center 
+        rounded-lg shadow-2xl transition-all duration-500"
+        style={{
+          backgroundImage: `url(${images[isImage]})`,
+        }}
+      >
+
+        <div className="absolute inset-0
+         bg-black/50 rounded-lg" 
+         />
+        <div className="absolute bottom-4 left-4 
+        md:bottom-6 md:left-6 z-10
+        ">
+          <div className="bg-white/10 backdrop-blur-md
+            border border-white/20 p-5 rounded-xl 
+            shadow-lg text-white max-w-md
+          ">
+
+            <h1 className="text-xl md:text-2xl font-bold">
+              Browse a wide range of tiles To bring your ideas to life.
+            </h1>
+            <p className="text-gray-200 text-sm mt-2">
+              To bring your ideas to life. Explore unique patterns and textures that bring life and character to your space.
+            </p>
+
+            <div className="flex gap-3 mt-4">
+              <Link href="#">
+                <Button className="bg-red-600 hover:bg-red-700 text-white">
+                  Discover Now
+                </Button>
+              </Link>
+
+              <Link href="/#">
+                <Button variant="outline" className="text-white">
+                  View Gallery
+                </Button>
+              </Link>
+
+           </div>
+           </div>
           </div>
-        </div>
       </div>
-    </div>
     </div>
   );
 };

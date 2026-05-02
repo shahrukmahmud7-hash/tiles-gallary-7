@@ -1,5 +1,6 @@
 "use client"
 
+import { ProfileUpdat } from "@/components/ProfileUpdate";
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Button, Card } from "@heroui/react";
 
@@ -42,7 +43,7 @@ const MyProfilePage = () => {
         <p className="text-gray-400 text-sm">
           Welcome to your profile dashboard
         </p>
-        <div className="flex gap-3 justify-center mt-2">
+        {/* <div className="flex gap-3 justify-center mt-2">
           <Button className="bg-red-600 text-white px-4 
           py-2 rounded-md hover:bg-red-700
           ">
@@ -51,7 +52,11 @@ const MyProfilePage = () => {
           <Button variant="outline">
             Logout
           </Button>
+        </div> */}
+        <div className="">
+             <ProfileUpdat/>
         </div>
+       
       </Card>
     </div>
     );
