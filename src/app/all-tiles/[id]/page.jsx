@@ -5,7 +5,7 @@ import Link from "next/link"
 const TilesDetailsPage = async ({ params }) => {
     const {id} = await params;
 
-  const res = await fetch('https://tiles-gallary-7.vercel.app/data.json')
+  const res = await fetch('http://localhost:3000/data.json')
   const tiles = await res.json();
   const tile = tiles.find(t => t.id == id)
 
