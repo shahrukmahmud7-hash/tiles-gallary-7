@@ -1,11 +1,11 @@
+import React from 'react';
 
-
-const RegisterPage = () => {
+const Page = () => {
     return (
         <div>
-           Register 
+            
         </div>
     );
 };
 
-export default RegisterPage;
+export default Page; 
