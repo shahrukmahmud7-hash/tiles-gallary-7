@@ -61,7 +61,7 @@ const Navbar = () => {
             <div className="flex gap-2 items-center justify-center ">
               <Avatar >
                 <Avatar.Image
-                  alt="John Doe"
+                  alt="Tom Curise"
                   src={user?.image}
                   referrerPolicy="no-referrer"
                 />
