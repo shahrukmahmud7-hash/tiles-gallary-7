@@ -4,7 +4,7 @@ import data from '../../public/data.json'
 
 const TilesHomePage = async() => {
 
-  // const res = await fetch('data')
+  // const res = await fetch('')
   // const tiles = await res.json();
 
     return (

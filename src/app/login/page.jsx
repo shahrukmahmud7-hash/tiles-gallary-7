@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 const LogInPage = () => {
 
@@ -18,22 +19,31 @@ const LogInPage = () => {
      const {data, error} = await authClient.signIn.email({
             email,
             password,
+            callbackURL: "/",
         })
            console.log({data, error})
             if(error){
-      alert(error.message)
+      toast.error (error.message)
     } else {
-      alert('succesfull');
+      toast.success ('Login succesfull');
     }
    }  
 
     const handleGooleLogin = async () => {
 
-       const data = await authClient.signIn.social({
+       const {data , error} = await authClient.signIn.social({
         provider: "google",
   });
         console.log(data , 'data');
-    }
+         if (error) {
+        toast.error ("Google login failed");
+      } else {
+       toast.success ('Login succesfull');
+       router.push("/");
+      }
+    } 
+
+
      
     const [isShowPassword , setIsShowPassword ] = useState(false)
 

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
 
@@ -25,9 +26,10 @@ const RegisterPage = () => {
 
     console.log({data, error})
     if(error){
-      alert(error.message)
+      toast.error (error.message)
     } else {
-      alert('succesfull');
+      toast.success ('succesfull');
+      router.push('/')
     }
 
    }

@@ -3,8 +3,18 @@ import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+   
+  const pathname = usePathname();
+  
+  const linkStyle = (path) =>
+  `flex items-center gap-2 ${
+    pathname === path
+      ? "bg-[#244D3F] text-white p-2 m-2 rounded-lg font-bold"
+      : ""
+  }`;
 
   const { data: session } = authClient.useSession()
   const user = session?.user;
@@ -33,25 +43,31 @@ const Navbar = () => {
         </div>
 
         {/* Nav all linlks are here */}
-        <ul className="flex items-center gap-5 text-[#706F6F] text-sm mx-auto w-fit">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/all-tiles">All Tiles</Link>
-          </li>
-          <li>
-            <Link href="/my-profile">My Profile</Link>
-          </li>
+        <ul className="flex items-center gap-5 
+        text-[#706F6F] text-sm mx-auto w-fit">
+         <li>
+         <Link className={linkStyle("/")} 
+         href="/">Home</Link>
+        </li>
+
+      <li>
+       <Link className={linkStyle("/all-tiles")} 
+       href="/all-tiles">All Tiles</Link>
+     </li>
+
+        <li>
+        <Link className={linkStyle("/my-profile")} 
+        href="/my-profile">My Profile</Link>
+    </li>
         </ul>
         
          <div className="flex gap-4">
           {!user && (
             <ul className="flex items-center gap-4 ">
-              <li>
+              <li className="text-[#706F6F] text-sm">
                 <Link href={"/login"}>Login</Link>
               </li>
-              <li>
+              <li className="text-[#706F6F] text-sm" >
                 <Link href={"/register"}>Register</Link>
               </li>
             </ul>
