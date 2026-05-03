@@ -8,11 +8,11 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
    
   const pathname = usePathname();
-  
+
   const linkStyle = (path) =>
   `flex items-center gap-2 ${
     pathname === path
-      ? "bg-[#244D3F] text-white p-2 m-2 rounded-lg font-bold"
+      ? "bg-[#244D3F] text-white p-2 m-2 rounded-xl font-bold"
       : ""
   }`;
 
