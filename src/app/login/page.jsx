@@ -3,12 +3,16 @@ import { authClient } from "@/lib/auth-client";
 import {Check} from "@gravity-ui/icons";
 import { Button, Card, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { GrGoogle } from "react-icons/gr";
 import { toast } from "react-toastify";
 
 const LogInPage = () => {
+
+   const searchParams = useSearchParams();
+   const redirect = searchParams.get("redirect") || "/";
 
    const onSubmit = async(e) =>{
       e.preventDefault()
@@ -19,7 +23,7 @@ const LogInPage = () => {
      const {data, error} = await authClient.signIn.email({
             email,
             password,
-            callbackURL: "/",
+            callbackURL: redirect,
         })
            console.log({data, error})
             if(error){
@@ -33,17 +37,16 @@ const LogInPage = () => {
 
        const {data , error} = await authClient.signIn.social({
         provider: "google",
+        callbackURL: redirect,
   });
         console.log(data , 'data');
          if (error) {
         toast.error ("Google login failed");
       } else {
        toast.success ('Login succesfull');
-       router.push("/");
+    
       }
     } 
-
-
      
     const [isShowPassword , setIsShowPassword ] = useState(false)
 
