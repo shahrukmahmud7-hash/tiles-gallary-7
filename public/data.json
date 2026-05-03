@@ -9,7 +9,11 @@
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Ceramic",
-    "inStock": true
+    "inStock": true,
+     "name": "Chandler Bing",
+    "review": "Could these tiles be any more perfect? My living room went from ‘meh’ to magazine cover overnight.",
+    "rating": 5,
+     "email": "chandlerbing7@gmail.com"
   },
   {
     "id": "tile_002",
@@ -21,7 +25,11 @@
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Ceramic",
-    "inStock": true
+    "inStock": true,
+     "name": "Monica Galler Bing",
+    "review": "Everything looks so clean and perfectly aligned now. These tiles are exactly how I like it—organized and flawless",
+    "rating": 4,
+      "email": "monicabing75@gmail.com"
   },
   {
     "id": "tile_003",
@@ -33,7 +41,11 @@
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Ceramic",
-    "inStock": false
+    "inStock": false,
+     "name": "Ross Galler",
+    "review": "From a structural and aesthetic perspective, these tiles significantly enhance the overall interior design. Truly impressive.",
+    "rating": 5,
+      "email": "rossgaller675@gmail.com"
   },
   {
     "id": "tile_004",
@@ -45,7 +57,11 @@
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Ceramic",
-    "inStock": true
+    "inStock": true,
+     "name": "Joey Tribiani",
+    "review": "These tiles look amazing… almost as good as pizza. Okay, maybe not better than pizza, but still really good!",
+    "rating": 4.5,
+      "email": "joeytribiani767@gmail.com"
   },
   {
     "id": "tile_005",
@@ -57,7 +73,11 @@
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Ceramic",
-    "inStock": true
+    "inStock": true,
+     "name": "Pheobe Buffey",
+    "review": "These tiles feel like a song… unique, a little quirky, but totally beautiful. I love the vibe they bring.",
+    "rating": 3.7,
+      "email": "pheobebufey8767@gmail.com"
   },
   {
     "id": "tile_006",
@@ -69,6 +89,10 @@
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Ceramic",
-    "inStock": false
+    "inStock": false,
+     "name": "Rachel Green",
+    "review": "Oh my God, these tiles are so stylish! My space looks like something straight out of a fashion magazine..",
+    "rating": 5,
+      "email": "rachelgreen404@gmail.com"
   }
 ]  

@@ -1,54 +1,79 @@
-import { FaGem, FaShippingFast, FaPaintBrush, FaTags } from "react-icons/fa";
-
+import { FaRegStar, FaStar, FaStarHalfAlt, FaUsers } from "react-icons/fa";
+import data from '../../public/data.json'
 
 const PepopleOnipion = () => {
+
+    const renderStars = (rating) => {
+  const stars = [];
+
+  for (let i = 1; i <= 5; i++) {
+    if (rating >= i) {
+      stars.push("full");
+    } else if (rating >= i - 0.5) {
+      stars.push("half");
+    } else {
+      stars.push("empty");
+    }
+  }
+
+  return stars;
+};
+
     return (
-         <div className="max-w-7xl mx-auto px-6 py-16"> 
+        <div className="max-w-7xl mx-auto px-6 py-16">
+
       <div className="text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-          Why Choose Us
+          What People Say About Us <p className="
+          flex items-center text-center justify-center
+          "> <FaUsers /></p>
         </h2>
         <p className="text-gray-500 mt-2">
-          We provide premium tiles for modern and elegant spaces
+          Real feedback from our happy customers 
+         
         </p>
       </div>
 
-      <div className="grid md:grid-cols-4 gap-6">
-        <div className="bg-gray-100 p-6 rounded-xl text-center hover:shadow-lg transition">
-          <FaGem className="text-3xl mx-auto text-gray-700 mb-3" />
-          <h3 className="font-semibold">Premium Quality</h3>
-          <p className="text-sm text-gray-500 mt-2">
-            High quality tiles for long lasting beauty
-          </p>
-        </div>
+      <div className=" grid md:grid-cols-3 gap-6">
 
-        <div className="bg-gray-100 p-6 rounded-xl text-center hover:shadow-lg transition">
-          <FaPaintBrush className="text-3xl mx-auto text-gray-700 mb-3" />
-          <h3 className="font-semibold">Modern Designs</h3>
-          <p className="text-sm text-gray-500 mt-2">
-            Stylish and creative tile patterns
-          </p>
-        </div>
+       {data.map(tile => <div className=" relative bg-gray-100 p-6 
+          rounded-xl hover:shadow-lg transition"
+          key={tile.id} >
+           <div className="bg-gray-100 p-6 rounded-xl 
+           hover:shadow-lg transition">
+          <div className="flex gap-1 text-yellow-500 mb-3">
+        <div className="flex items-center text-center 
+         justify-center text-yellow-500">
+    
+         <p className="flex text-xl gap-2 text-center 
+         items-center justify-center 
+         ">Review : </p>
+          {renderStars(tile.rating).map((type, index) => {
+          if (type === "full") return <FaStar key={index} />;
+           if (type === "half") return <FaStarHalfAlt 
+           className="flex text-sm gap-2 " key={index} />;
+           return <FaRegStar key={index} />;
+           })}
 
-        <div className="bg-gray-100 p-6 rounded-xl text-center hover:shadow-lg transition">
-          <FaShippingFast className="text-3xl mx-auto text-gray-700 mb-3" />
-          <h3 className="font-semibold">Fast Delivery</h3>
-          <p className="text-sm text-gray-500 mt-2">
-            Quick and safe delivery to your home
+           </div>
+          </div>
+          <p className="text-gray-600 text-sm">
+            {tile.review}
           </p>
+          <h4 className="mt-4 text-xl font-bold">{tile.name}</h4>
+          <h4 className="mt-2 font-semibold">{tile.email}</h4>
         </div>
-
-        <div className="bg-gray-100 p-6 rounded-xl text-center hover:shadow-lg transition">
-          <FaTags className="text-3xl mx-auto text-gray-700 mb-3" />
-          <h3 className="font-semibold">Best Price</h3>
-          <p className="text-sm text-gray-500 mt-2">
-            Affordable pricing for every customer
-          </p>
-        </div>
+         
+         <div className="absolute top-2 right-2 text-xs bg-[#244d3f96] rounded-lg text-white px-3 py-2">
+          <button>Edit</button>
+         </div>
+          </div>) }
 
       </div>
     </div>
     );
 };
 
-export default PepopleOnipion;
+export default PepopleOnipion; 
+
+

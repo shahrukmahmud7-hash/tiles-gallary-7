@@ -11,7 +11,7 @@ const MyProfilePage = () => {
 
     return (
         <div className="mt-10 flex items-center justify-center ">
-
+           
       <Card className="max-w-sm w-full p-6 rounded-2xl shadow-xl 
        border border-red-400 bg-white text-center">
 

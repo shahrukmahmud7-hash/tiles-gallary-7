@@ -6,7 +6,7 @@ The goal of this project is to create a responsive, user-friendly gallery platfo
 
 # Live URL
 
-here : 
+here : https://tiles-gallary-7.vercel.app
 
 
 ## Key Features
