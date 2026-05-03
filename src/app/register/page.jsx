@@ -91,7 +91,7 @@ const RegisterPage = () => {
                <button className="w-full bg-blue-500 hover:bg-blue-600 
                transition-colors duration-200 p-2 rounded-full
                 text-white font-medium" >
-                 Login
+                 Register
                </button>
              </div>
            </Form>
