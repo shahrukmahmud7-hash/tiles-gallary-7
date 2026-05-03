@@ -31,50 +31,45 @@ const Banner = () => {
   }, []);
 
    return (
-     <div className="max-w-7xl mx-auto px-4 mt-6">
+     <div className="max-w-7xl mx-auto px-4 mt-6 flex items-center justify-center">
       <div
         className="relative h-[40vh] sm:h-[50vh] md:h-[55vh] lg:h-[60vh] 
         w-full bg-cover bg-center flex items-center 
-        rounded-lg shadow-2xl transition-all duration-500"
+        rounded-lg shadow-2xl transition-all duration-500  "
         style={{
           backgroundImage: `url(${images[isImage]})`,
         }}
       >
 
-        <div className="absolute inset-0
-         bg-black/50 rounded-lg" 
-         />
-        <div className="absolute bottom-4 left-4 
-        md:bottom-6 md:left-6 z-10
-        ">
-          <div className="bg-white/10 backdrop-blur-md
-            border border-white/20 p-5 rounded-xl 
-            shadow-lg text-white max-w-md
-          ">
+   <div className="absolute inset-0 flex items-end md:items-end md:justify-start justify-center z-10 p-3 sm:p-4">
+  <div className="bg-white/10 backdrop-blur-md border border-white/20 
+    text-white w-[92%] sm:w-[80%] md:max-w-sm 
+    p-3 sm:p-4 rounded-lg shadow-lg">
 
-            <h1 className="text-xl md:text-2xl font-bold">
-              Browse a wide range of tiles To bring your ideas to life.
-            </h1>
-            <p className="text-gray-200 text-sm mt-2">
-              To bring your ideas to life. Explore unique patterns and textures that bring life and character to your space.
-            </p>
+    <h1 className="text-base sm:text-lg md:text-4xl font-semibold leading-snug text-center md:text-left">
+      Browse a wide range of tiles..
+    </h1>
 
-            <div className="flex gap-3 mt-4">
-              <Link href="#">
-                <Button className="bg-red-600 hover:bg-red-700 text-white">
-                  Discover Now
-                </Button>
-              </Link>
+    <p className="text-[11px] sm:text-xs mt-1 opacity-90 text-center md:text-xl md:text-left">
+      Explore unique patterns and textures for your space.
+    </p>
 
-              <Link href="/#">
-                <Button variant="outline" className="text-white">
-                  View Gallery
-                </Button>
-              </Link>
+    <div className="flex flex-col sm:flex-row gap-2 mt-3">
+      <Link href="#" className="w-full sm:w-auto">
+        <Button className="bg-red-600 hover:bg-red-700 text-white w-full sm:w-auto text-sm py-1.5">
+          Discover Now
+        </Button>
+      </Link>
 
-           </div>
-           </div>
-          </div>
+      <Link href="/#" className="w-full sm:w-auto">
+        <Button variant="outline" className="text-white w-full sm:w-auto border-white/40 text-sm py-1.5">
+         View Gallery
+        </Button>
+      </Link>
+    </div>
+
+  </div>
+</div>
       </div>
     </div>
   );

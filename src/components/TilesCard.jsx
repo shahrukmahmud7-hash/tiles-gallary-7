@@ -19,7 +19,7 @@ const TilesCard = ({ tile }) => {
                
            </div>
            <div className="space-y-2 text-center"> 
-             <h2 className="text-2xl font-bold text-gray-800" >{tile.title}
+             <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-800" >{tile.title}
 
              </h2>
     
@@ -31,12 +31,12 @@ const TilesCard = ({ tile }) => {
               </h2>
 
               <SeparatorRoot orientation="horizontal"/>
-            <p className="text-lg font-semibold hover:text-green-500 text-gray-400" >{tile.description}</p>
+            <p className="text-sm md:text-base text-gray-400" >{tile.description}</p>
          </div>
           
           <Link href={`/all-tiles/${tile.id}`}
           className="flex items-center justify-center" >
-            <Button className="w-full" variant="danger" >View Details</Button>
+            <Button className="w-full text-sm md:text-base" variant="danger" >View Details</Button>
           </Link>
         
         </Card>

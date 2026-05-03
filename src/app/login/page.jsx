@@ -96,13 +96,12 @@ const LogInPage = () => {
    </div>
 
       <div className="flex gap-2">
-        <Button type="submit">
-          <Check />
-          Submit
-        </Button>
-        <Button type="reset" variant="secondary">
-          Reset
-        </Button>
+      <button className="w-full bg-blue-500 hover:bg-blue-600 
+      transition-colors duration-200 p-2 rounded-full
+     text-white font-medium" >
+              Login
+         </button>
+      
       </div>
     </Form>
         <div className="flex items-center">
