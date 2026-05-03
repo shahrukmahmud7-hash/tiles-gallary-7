@@ -5,9 +5,10 @@ import { Button } from "@heroui/react";
 import Link from "next/link";
 
 const images = [
+  
+  "/images/house-tiles.webp",
   "/images/banner-eternal.avif",
   "/images/banner-ts.jpg",
-  "/images/tiles-showroom.avif",
 ];
 
 const Banner = () => {

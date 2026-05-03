@@ -46,3 +46,13 @@ Public pages: Home, Login, Register, All Tiles
 Loading spinner during data fetch
 404 Not Found page
 Fully responsive design (mobile, tablet, desktop) 
+
+## NPM Packages Used
+next.js - project
+react-Icons
+MONGODB
+Hero Ui
+better-auth
+tailwindcss
+react-toastify
+gravitiyui
